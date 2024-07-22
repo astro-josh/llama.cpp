@@ -354,10 +354,12 @@ endif
 
 ifndef RISCV
 
-ifeq ($(UNAME_M),$(filter $(UNAME_M),x86_64 i686 amd64))
+#ifeq ($(UNAME_M),$(filter $(UNAME_M),x86_64 i686 amd64))
 	# Use all CPU extensions that are available:
-	MK_CFLAGS     += -march=native -mtune=native
-	HOST_CXXFLAGS += -march=native -mtune=native
+#	MK_CFLAGS     += -march=native -mtune=native
+#	HOST_CXXFLAGS += -march=native -mtune=native
+	MK_CFLAGS   += -march=znver2 -mtune=znver2
+	MK_HOST_CXXFLAGS += -march=znver2 -mtune=znver2
 
 	# Usage AVX-only
 	#MK_CFLAGS   += -mfma -mf16c -mavx
