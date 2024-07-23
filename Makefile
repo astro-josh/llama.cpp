@@ -358,8 +358,8 @@ ifndef RISCV
 	# Use all CPU extensions that are available:
 #	MK_CFLAGS     += -march=native -mtune=native
 #	HOST_CXXFLAGS += -march=native -mtune=native
-	MK_CFLAGS   += -march=znver2 -mtune=znver2
-	MK_HOST_CXXFLAGS += -march=znver2 -mtune=znver2
+	MK_CFLAGS   += -march=x86-64 -mtune=x86-64
+	MK_HOST_CXXFLAGS += -march=x86-64 -mtune=x86-64
 
 	# Usage AVX-only
 	#MK_CFLAGS   += -mfma -mf16c -mavx
